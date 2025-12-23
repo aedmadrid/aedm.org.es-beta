@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("/src/material-symbols/index.css");
+@import url("/src/material-symbols/outlined.css");
+
+@font-face {
+    font-family: "DM Mono";
+    src: url("../res/Fuentes/DMMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Mono";
+    src: url("../res/Fuentes/DMMono-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Mono";
+    src: url("../res/Fuentes/DMMono-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Montreal";
+    src: url("../res/Fuentes/NeueMontreal-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neue Montreal";
+    src: url("../res/Fuentes/NeueMontreal-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PKiko";
+    src: url("../res/Fuentes/PKiko-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    font-family: "Neue Montreal", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "PKiko", serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: "PKiko", serif;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 16px 0;
+}
+
+code {
+    font-family:
+        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+main {
+    text-align: left;
+    margin: 20px;
+    width: 800px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
