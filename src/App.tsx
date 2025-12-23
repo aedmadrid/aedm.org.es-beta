@@ -7,6 +7,7 @@ import Inicio from "./pages/Inicio";
 import { Contacto } from "./pages/Contacto";
 import { Lorem } from "./pages/Lorem";
 import { Asocia } from "./pages/Asocia";
+import { ASOapp } from "./pages/asoApp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/lorem" element={<Lorem />} />
         <Route path="/asocia" element={<Asocia />} />
+        <Route path="/app" element={<ASOapp />} /> 
       </Routes>
     </BrowserRouter>
   );
