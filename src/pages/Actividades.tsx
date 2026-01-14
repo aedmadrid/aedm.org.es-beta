@@ -15,7 +15,7 @@ export const Actividades = () => {
   const [actividades, setActividades] = useState<Actividad[]>([]);
 
   useEffect(() => {
-    fetch("/ACTIVIDADES_DB.json")
+    fetch("https://api.aedm.org.es/ACTIVIDADES_DB.json")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
