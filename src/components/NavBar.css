@@ -1,3 +1,20 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px;
+    background-color: rgba(253, 253, 253, 0.462);
+    backdrop-filter: blur(12px);
+    z-index: 50;
+}
+
 /* Desktop Navigation */
 .navbar-nav-desktop {
     display: flex;
@@ -30,6 +47,11 @@
 @media (max-width: 767px) {
     .navbar-nav-desktop {
         display: none;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+        gap: 16px;
     }
 
     .navbar-menu-btn {

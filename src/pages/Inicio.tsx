@@ -5,6 +5,11 @@ import { SubstackFeed } from "../components/SubstackFeed";
 const Inicio: React.FC = () => {
   return (
     <main>
+      <img
+        src="/IMG/bannermobile.png"
+        alt="Logo"
+        style={{ width: "100%", height: "auto", paddingBottom: 20 }}
+      />
       <h1 style={{ justifyContent: "left", textAlign: "left" }}>¡Hola!</h1>
       <p>
         Somos la asociación de estudiantes de la{" "}

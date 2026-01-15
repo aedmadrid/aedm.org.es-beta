@@ -5,6 +5,7 @@ import "./NavBar.css";
 
 const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const activeStyle = {
     color: "#36e452",
     textDecoration: "underline",
@@ -22,24 +23,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: 80,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alignItems: "center",
-          paddingLeft: 20,
-          paddingRight: 20,
-          backgroundColor: "rgba(253, 253, 253, 0.462)",
-          backdropFilter: "blur(12px)",
-          zIndex: 50,
-        }}
-      >
+      <div className="navbar-container">
         <img
           src="/adem-logo.svg"
           alt="AEDM Logo"
