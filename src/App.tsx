@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
 import Inicio from "./pages/Inicio";
 import { Contacto } from "./pages/Contacto";
@@ -13,10 +14,12 @@ import { Proyectos } from "./pages/Proyectos";
 import { Reclama } from "./pages/Reclama";
 import { Mercadillo } from "./pages/Mercadillo";
 import { MercadilloPlano } from "./pages/MercadilloPlano";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />
@@ -31,6 +34,7 @@ function App() {
         <Route path="/mercadillo/plano" element={<MercadilloPlano />} />
         <Route path="/proyectos" element={<Proyectos />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

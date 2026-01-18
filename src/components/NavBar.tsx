@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
     <>
       <div className="navbar-container">
         <img
-          src="/adem-logo.svg"
+          src="/aedm.svg"
           alt="AEDM Logo"
           style={{ height: 40, marginTop: 10, cursor: "pointer" }}
           onClick={homeUrl}

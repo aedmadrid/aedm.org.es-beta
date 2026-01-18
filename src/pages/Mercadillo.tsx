@@ -116,9 +116,13 @@ export const Mercadillo: React.FC = () => {
           <h2
             key={link.id}
             style={{
-              fontSize: "1.25rem",
+              fontSize: "2rem",
               margin: 0,
-              fontFamily: "'Neue Montreal', sans-serif",
+              fontFamily: "PKiko, sans-serif",
+              color: "black",
+              textDecoration: "underline",
+              textDecorationColor: "black",
+              textDecorationStyle: "dashed",
             }}
           >
             <a

@@ -8,7 +8,6 @@ type Project = {
 
 export const Proyectos: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -34,8 +33,7 @@ export const Proyectos: React.FC = () => {
           console.error("Error fetching data:", err);
           setError("No se pudieron cargar los proyectos.");
         }
-      })
-      .finally(() => setLoading(false));
+      });
 
     return () => controller.abort();
   }, []);
@@ -44,7 +42,6 @@ export const Proyectos: React.FC = () => {
     <main>
       <h1>Proyectos</h1>
 
-      {loading && <p>Cargando proyectos…</p>}
       {error && <p>{error}</p>}
 
       {projects.map((project) => (

@@ -92,6 +92,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1 0 auto;
+    min-height: calc(100vh - 390px);
+    overflow: auto;
 }
 
 @media (max-width: 850px) {
@@ -133,6 +136,14 @@ input {
     margin-bottom: 10px;
 }
 
+a:hover {
+    color: #36e452;
+    transition: color 0.1s ease-in-out;
+}
+a {
+    transition: color 0.1s ease-in-out;
+    color: black;
+}
 .chip {
     background-color: #36e452;
     padding: 8px 16px;
