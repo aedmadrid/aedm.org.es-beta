@@ -1,10 +1,14 @@
 import React from "react";
 import { Botón } from "../components/Botón";
+import { useTitle } from "../hooks/useTitle";
+
+export const PageTitle = "Contacto";
 
 export const Contacto: React.FC = () => {
+  useTitle(PageTitle);
   return (
     <main>
-      <h1>Contacto</h1>
+      <h1>{PageTitle}</h1>
 
       <p>¿Dudas? ¿Sugerencias? No dudes en contactarnos ;-)</p>
 

@@ -296,6 +296,8 @@ const renderBlocksGrouped = (blocks: NotionBlock[] = []): ReactNode[] => {
 
 type FetchState = "idle" | "loading" | "success" | "error" | "not-found";
 
+export let PageTitle = "";
+
 const NotionPage: React.FC<{ pageId?: string }> = ({ pageId: propPageId }) => {
   const location = useLocation();
   const [status, setStatus] = useState<FetchState>("idle");
@@ -313,6 +315,8 @@ const NotionPage: React.FC<{ pageId?: string }> = ({ pageId: propPageId }) => {
 
   useEffect(() => {
     if (!pageId) {
+      PageTitle = "";
+      document.title = "aedm";
       setStatus("not-found");
       setPage(null);
       return;
@@ -329,6 +333,8 @@ const NotionPage: React.FC<{ pageId?: string }> = ({ pageId: propPageId }) => {
         });
 
         if (res.status === 404) {
+          PageTitle = "";
+          document.title = "aedm";
           setStatus("not-found");
           setPage(null);
           return;
@@ -340,6 +346,8 @@ const NotionPage: React.FC<{ pageId?: string }> = ({ pageId: propPageId }) => {
 
         const data = (await res.json()) as NotionPageResponse;
         setPage(data);
+        PageTitle = data.current_page_title;
+        document.title = `${PageTitle} | aedm`;
         setStatus("success");
       } catch (error: unknown) {
         // Ignore aborts
@@ -347,6 +355,8 @@ const NotionPage: React.FC<{ pageId?: string }> = ({ pageId: propPageId }) => {
         if ((error as any)?.name === "AbortError") return;
 
         console.error("Error fetching Notion page:", error);
+        PageTitle = "";
+        document.title = "aedm";
         setStatus("error");
         setMessage("No hemos podido cargar la página solicitada.");
       }

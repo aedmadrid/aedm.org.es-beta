@@ -16,6 +16,8 @@ import { Mercadillo } from "./pages/Mercadillo";
 import { MercadilloPlano } from "./pages/MercadilloPlano";
 import { Footer } from "./components/footer";
 import CookieConsent from "react-cookie-consent";
+import { TresEspacios } from "./pages/3espacios.notion";
+import { Museaso } from "./pages/museaso.notion";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
         <Route path="/mercadillo" element={<Mercadillo />} />
         <Route path="/mercadillo/plano" element={<MercadilloPlano />} />
         <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/3espacios" element={<TresEspacios />} />
+        <Route path="/museaso" element={<Museaso />} />
       </Routes>
       <Footer />
     </BrowserRouter>

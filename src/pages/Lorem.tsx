@@ -1,6 +1,8 @@
 import React from "react";
+import { useTitle } from "../hooks/useTitle";
 
 export const Lorem: React.FC = () => {
+  useTitle("");
   return (
     <main>
       <h1>Lorem</h1>

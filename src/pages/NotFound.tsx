@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NotionPage from "../components/NotionPage";
 import { Botón } from "../components/Botón";
@@ -14,6 +14,10 @@ const NotFound: React.FC = () => {
     }
     return null;
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!pageId) document.title = "aedm";
+  }, [pageId]);
 
   if (pageId) {
     // If the URL is /id/<pageId> render the NotionPage component

@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { HashtagScroller } from "../components/HashtagScroller";
+import { useTitle } from "../hooks/useTitle";
+
+export const PageTitle = "Planos - Mercadillo";
 
 // Types
 interface Vendor {
@@ -502,6 +505,8 @@ export const MercadilloPlano: React.FC = () => {
   const mapInstanceRef = useRef<L.Map | null>(null);
   const markersRef = useRef<{ [key: string]: L.Marker }>({});
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useTitle(PageTitle);
 
   // Initialize map
   useEffect(() => {

@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import SignaturePad from "signature_pad";
 import { Botón } from "../components/Botón";
 import { GranBotón } from "../components/GranBotón";
+import { useTitle } from "../hooks/useTitle";
 import {
   PDFDocument,
   rgb,
@@ -29,6 +30,7 @@ interface Notification {
   id: number;
   message: string;
 }
+export const PageTitle = "Expone / Solicita";
 
 export const Reclama: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -51,6 +53,8 @@ export const Reclama: React.FC = () => {
     documentos: "",
     fecha: new Date().toISOString().split("T")[0],
   });
+
+  useTitle(PageTitle);
 
   /**
    * Muestra una notificación emergente
@@ -497,7 +501,7 @@ export const Reclama: React.FC = () => {
 
   return (
     <main>
-      <h1>Expone / Solicita</h1>
+      <h1>{PageTitle}</h1>
 
       <div
         style={{

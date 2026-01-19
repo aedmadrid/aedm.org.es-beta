@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Caratula } from "../components/Caratula";
+import { useTitle } from "../hooks/useTitle";
 
 interface Actividad {
   name: string;
@@ -11,8 +12,12 @@ interface Actividad {
   fecha?: string;
 }
 
+export const PageTitle = "Actividades";
+
 export const Actividades = () => {
   const [actividades, setActividades] = useState<Actividad[]>([]);
+
+  useTitle(PageTitle);
 
   useEffect(() => {
     fetch("https://api.aedm.org.es/ACTIVIDADES_DB.json")
@@ -39,7 +44,7 @@ export const Actividades = () => {
 
   return (
     <main>
-      <h1>Actividades</h1>
+      <h1>{PageTitle}</h1>
 
       <div className="containerCaratulas">
         {actividades

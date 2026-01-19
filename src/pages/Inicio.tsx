@@ -1,8 +1,14 @@
 import React from "react";
 import { Botón } from "../components/Botón";
 import { SubstackFeed } from "../components/SubstackFeed";
+import { useTitle } from "../hooks/useTitle";
+
+export const PageTitle =
+  "Portada de la (aso)ciación de estudiantes de diseño de madrid";
 
 const Inicio: React.FC = () => {
+  useTitle(PageTitle);
+
   return (
     <main>
       <img

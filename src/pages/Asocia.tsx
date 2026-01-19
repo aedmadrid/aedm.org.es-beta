@@ -1,10 +1,14 @@
 import React from "react";
 import { GranBotón } from "../components/GranBotón";
+import { useTitle } from "../hooks/useTitle";
+
+export const PageTitle = "ASÓciate";
 
 export const Asocia: React.FC = () => {
+  useTitle(PageTitle);
   return (
     <main>
-      <h1>ASÓciate</h1>
+      <h1>{PageTitle}</h1>
 
       <h2>
         ‘La (aso)ciación de estudiantes de diseño de madrid o aedm tiene como

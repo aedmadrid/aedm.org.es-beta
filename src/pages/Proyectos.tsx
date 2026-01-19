@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { HClick } from "../components/HClick";
+import { useTitle } from "../hooks/useTitle";
 
 type Project = {
   pageId: string;
   name: string;
 };
 
+export const PageTitle = "Proyectos";
+
 export const Proyectos: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [error, setError] = useState<string | null>(null);
+
+  useTitle(PageTitle);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -40,7 +45,7 @@ export const Proyectos: React.FC = () => {
 
   return (
     <main>
-      <h1>Proyectos</h1>
+      <h1>{PageTitle}</h1>
 
       {error && <p>{error}</p>}
 

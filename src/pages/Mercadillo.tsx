@@ -1,6 +1,7 @@
 import React from "react";
 import { GranBotón } from "../components/GranBotón";
 import { HashtagScroller } from "../components/HashtagScroller";
+import { useTitle } from "../hooks/useTitle";
 
 // Hashtag data
 const hashtagsRow1 = [
@@ -61,6 +62,8 @@ const navLinks = [
   { id: "carteles", label: "Carteles" },
 ];
 
+export const PageTitle = "Mercadillo";
+
 // Shared hashtag rows configuration
 const hashtagRows = [
   { hashtags: hashtagsRow1, direction: "left" as const, duration: 25 },
@@ -69,6 +72,8 @@ const hashtagRows = [
 ];
 
 export const Mercadillo: React.FC = () => {
+  useTitle(PageTitle);
+
   return (
     <main>
       {/* Hero Image */}
@@ -83,15 +88,7 @@ export const Mercadillo: React.FC = () => {
       />
 
       {/* Title */}
-      <h1
-        style={{
-          textAlign: "center",
-          fontFamily: "PKiko, serif",
-          fontSize: "2.5rem",
-        }}
-      >
-        Mercadillo de Navidad 2025
-      </h1>
+      <h1>Mercadillo de Navidad 2025</h1>
       <p
         style={{
           textAlign: "center",
