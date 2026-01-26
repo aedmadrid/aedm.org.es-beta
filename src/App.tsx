@@ -18,7 +18,7 @@ import { Footer } from "./components/footer";
 import CookieConsent from "react-cookie-consent";
 import { TresEspacios } from "./pages/3espacios.notion";
 import { Museaso } from "./pages/museaso.notion";
-
+import PrivApp from "./pages/PrivApp";
 function App() {
   return (
     <BrowserRouter>
@@ -52,6 +52,7 @@ function App() {
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/3espacios" element={<TresEspacios />} />
         <Route path="/museaso" element={<Museaso />} />
+        <Route path="/privapp" element={<PrivApp />} />
       </Routes>
       <Footer />
     </BrowserRouter>
